@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+            <title>{% block title %}{% endblock %}This is {{ name }} website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <div class="row">
+        <div class="col-8 border border-light border-2">
+            <h1 class="blue mb-3">Docker</h1>
+            <p>
+                Docker is an open source containerization platform. It enables developers to package applications into
+                containers—standardized executable components combining application source code with the operating
+                system (OS) libraries and dependencies required to run that code in any environment. Developers can
+                create containers without Docker, but the platform makes it easier, simpler, and safer to build, deploy
+                and manage containers. Docker is essentially a toolkit that enables developers to build, deploy, run,
+                update, and stop containers using simple commands and work-saving automation through a single API.
+            </p>
+
+            <h5>Containers:</h5>
+            <p>
+                A Docker container is nothing but an environment virtualized during run-time to allow users to isolate
+                applications from
+                the system underpinning it. These containers are compact, portable units in which you can start up an
+                application quickly and easily. Containers are different than Virtual Machine that they deploy a
+                different level of virtualization. Unlike VMs where virtualization takes place in the hardware,
+                containers are virtualized in the app layer.
+            </p>
+
+            <h5>Images:</h5>
+            <p>
+                A docker image is an immutable file that contains all the dependencies required to run an application
+                correctly. As images cannot be changed, they are also called snapshots. Since images are mere templates,
+                they cannot be run on their own. You can use the image as a foundation to build a container. Once the
+                container has been created, an editable layer is added on the top of the image, meaning you can modify
+                the newly created copy of the image. Docker images can have a series of layers, each of which differs,
+                but also originates from, the previous one. These layers are immutable files to which a container layer
+                can be added once you use them to build a virtual environment.
+            </p>
+
+            <h5>Link to the project repo on a Docker Hub:</h5>
+
+            <h5>Starting the project & accessing the container with the terminal commands:</h5>
+
+        </div>
+        <div class="col">
+            <h4 class="blue mb-3">Docker Commands:</h4>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item"><strong>Build an image from the Dockerfile in the current directory and tag
+                    the image:</strong> docker build -t [image] .
+                </li>
+                <li class="list-group-item"><strong>List all images that are locally stored with the Docker
+                    Engine:</strong> docker image ls
+                </li>
+                <li class="list-group-item"><strong>Delete an image from the local image store:</strong> docker image rm
+                    [image]
+                </li>
+                <li class="list-group-item"><strong>Pull an image from a registry:</strong> docker pull [image]</li>
+                <li class="list-group-item"><strong>Delete an image from the local image store:</strong> docker image rm
+                    [image]
+                </li>
+                <li class="list-group-item"><strong>Delete an image from the local image store:</strong> docker image rm
+                    [image]
+                </li>
+                <li class="list-group-item"><strong>Delete an image from the local image store:</strong> docker image rm
+                    [image]
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}

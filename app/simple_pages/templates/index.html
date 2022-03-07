@@ -1,4 +1,82 @@
 {% extends "base.html" %}
 {% block content %}
-    Index Page
+   <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+            <title>{% block title %}{% endblock %}This is {{ name }} website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <span class="disappear">Index Page</span>
+    <div class="row border border-2 mb-3">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="{{ url_for('simple_pages.show', page="git")}}">
+                        <img src="{{ url_for('static', filename='images/git.png') }}" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ url_for('simple_pages.show', page="docker")}}">
+                        <img src="{{ url_for('static', filename='images/docker.png') }}" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ url_for('simple_pages.show', page="flask")}}">
+                        <img src="{{ url_for('static', filename='images/flask.png') }}" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ url_for('simple_pages.show', page="deployment")}}">
+                        <img src="{{ url_for('static', filename='images/cicd.png') }}" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>
 {% endblock %}

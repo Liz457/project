@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+            <title>{% block title %}{% endblock %}This is {{ name }} website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <span class="disappear">Flask</span>
+    <div class="row">
+        <div class="col-8 border border-light border-2">
+            <h1 class="blue mb-3">Python/Flask</h1>
+            <h5>Outline:</h5>
+            <p>Project Root folder: root of the project</p>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">docker-compose.yml: used for configuration of the local environment.
+                    represent the containers that will be created in the application. This is ready for local use, with the
+                    services already defined.
+                </li>
+                <li class="list-group-item">Dockerfile: Dockerfile is used to build Docker Images. It is a simple text
+                    file that consists of a set of instructions or commands that is executed by an automated build
+                    process in steps from top to bottom.
+                </li>
+                 <li class="list-group-item">heroku.yml: to build Docker images on Heroku</li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+            </ol>
+
+
+        </div>
+
+        <div class="col">
+            <h4 class="blue mb-3">Docker Commands:</h4>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}

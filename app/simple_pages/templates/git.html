@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block content %}
+<!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+            <title>{% block title %}{% endblock %}This is {{ name }} website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <div class="row">
+        <div class="col-8 border border-light border-2">
+            <h1 class="red mb-3">Git</h1>
+            <p style="background-color: white"> Git is one of the most popular version control systems. version control
+                keeps track of every change in
+                your code, and it allows you to go back in time when something goes wrong. Also, it is really helpful to
+                prevent concurrent work from conflicting when multiple people are working
+                in the same project. An individual may be working on the sidebar navigation while another one is
+                simultaneously updating the header.</p>
+
+            <h5>Branches:</h5>
+            <p>A branch is a new/separate version of the main repository. Branches allow you to work on different parts
+                of a project without impacting the main branch. When the work is complete, a branch can be merged with
+                the main project.</p>
+            <p>You can even switch between branches and work on different projects without them interfering with each
+                other. Branching in Git is very lightweight and fast. Checkout is the command used to check out a
+                branch. Moving us from the current branch, to the one
+                specified at the end of the command.
+            </p>
+
+            <h5>Merge:</h5>
+            <p>
+                The git merge command lets you take the independent lines of development created by git branch and
+                integrate them into a single branch. Git merge will combine multiple sequences of commits into one
+                unified history. In the most frequent use cases, git merge is used to combine two branches. Git can
+                automatically merge commits unless there are changes that conflict in both commit sequences.
+            </p>
+
+            <h5>Commit:</h5>
+            <p>
+                Saves the group of changes you staged to your local repository. Add a comment with each commit that
+                summarizes the change. Git commit command is the main function for saving changes to local repository
+                safely. Commit takes a snapshot of the project and treats it as a version. Git does not add changes to a
+                commit automatically. You need to indicate which file and changes need to be saved before running the
+                Git commit command. The commit command does not save changes in remote servers, only in the local
+                repository of Git. After running the Git commit command, you need to type in the description of the
+                commit in the text editor. Once you move the changes to the local repository by using Git commit
+                command, you can use Git push to transfer them to a remote repository.
+            </p>
+
+            <h5>Tags:</h5>
+            <p>
+                Tags are ref's that point to specific points in Git history. Tagging is generally used to capture a
+                point in history that is used for a marked version release. A tag is like a branch that doesn’t change.
+                The git tag command is the primary driver of tag: creation, modification and deletion.
+            </p>
+
+            <h5>Repositories:</h5>
+            <p>
+                Git repository serves as a storage for all the changes and files that relate to a certain project.
+                Initializing Git repository is quite simple. Some Git repositories can be local, placed directly at your
+                local computer. You can use an already existing directory as a repository for your Git files or create a
+                brand new one. If you work in a team or you are invited to make changes to a particular code, chances
+                are you will need to access a remote Git repository. Git clone command or Git clone repository are the
+                names for a command that create a local version for you of that remote Git repository so that you could
+                create your own changes without any damage to the remote version.
+            </p>
+
+        </div>
+        <div class="col">
+            <h4 class="red mb-3">Git Commands:</h4>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item"><strong>Create a new branch:</strong> git branch branch_name</li>
+                <li class="list-group-item"><strong>Checkout a branch:</strong> git checkout branch_name</li>
+                <li class="list-group-item"><strong>Check the status of the current branch:</strong> git status</li>
+                <li class="list-group-item"><strong>Commit changes to the branch: </strong>git commit -m "new changes"
+                </li>
+                <li class="list-group-item"><strong>Initialize an existing directory as a Git repository:</strong>git init</li>
+                <li class="list-group-item"><strong>Retrieve an entire repository from a hosted location via URL:</strong> git clone [url]</li>
+                <li class="list-group-item"><strong>Merge the specified branch’s history into the current one:</strong> git merge [branch]
+</li>
+                <li class="list-group-item"><strong>Show all commits in the current branch’s history:</strong> git log</li>
+                <li class="list-group-item"><strong>Transmit local branch commits to the remote repository branch:</strong> git push [alias] [branch]</li>
+                <li class="list-group-item"><strong>Apply any commits of current branch ahead of specified one:</strong> git rebase [branch]</li>
+                <li class="list-group-item"><strong>Fetch and merge any commits from the tracking remote branch:</strong> git pull</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}

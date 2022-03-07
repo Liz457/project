@@ -1,3 +1,25 @@
 body {
-font-size: 200%;
+/*font-size: 200%;*/
+    font-family: Helvetica, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+
+.disappear{
+    /*color: #fff;*/
+    display: none;
+}
+
+.red{
+    color:#B33030;
+    text-align: center;
+}
+
+.blue{
+    color: #5800FF;
+    text-align: center;
+}
+
+h5{
+    color: #D06224;
+    font-weight: bolder;
 }
