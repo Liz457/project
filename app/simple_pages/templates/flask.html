@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<!doctype html>
+    <!doctype html>
     <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -15,30 +15,53 @@
     <span class="disappear">Flask</span>
     <div class="row">
         <div class="col-8 border border-light border-2">
-            <h1 class="blue mb-3">Python/Flask</h1>
+            <h1 class="red mb-3">Python/Flask</h1>
             <h5>Outline:</h5>
             <p>Project Root folder: root of the project</p>
-            <ol class="list-group list-group-numbered">
+            <ol class="list-group list-group-numbered mb-5">
                 <li class="list-group-item">docker-compose.yml: used for configuration of the local environment.
-                    represent the containers that will be created in the application. This is ready for local use, with the
+                    represent the containers that will be created in the application. This is ready for local use, with
+                    the
                     services already defined.
                 </li>
                 <li class="list-group-item">Dockerfile: Dockerfile is used to build Docker Images. It is a simple text
                     file that consists of a set of instructions or commands that is executed by an automated build
                     process in steps from top to bottom.
                 </li>
-                 <li class="list-group-item">heroku.yml: to build Docker images on Heroku</li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
-                <li class="list-group-item"></li>
+                <li class="list-group-item">heroku.yml: to build Docker images on Heroku</li>
             </ol>
+
+            <h5>Simple pages:</h5>
+            <ul>
+                <li class="pb-2">I used <i>blueprints</i> concept of Flask to create simple pages. It supports common
+                    patterns within an application.
+                </li>
+                <li class="pb-2">Under simple_pages folder, _init_.py --> which has the blueprint for simple pages. When
+                    you bind a function with the help of the @simple_pages.route decorator, the blueprint will record
+                    the intention
+                    of registering the function show on the application when it’s later registered. Additionally, it
+                    will prefix the endpoint of the function with the name of the blueprint which was given to the
+                    Blueprint
+                    constructor (in this case also simple_pages). The blueprint’s name does not modify the URL, only the
+                    endpoint.
+                </li>
+                <li class="pb-2">Under app folder, _init_.py --> which is the code to register the blueprint. This will
+                    create the flask app and register the blueprint for simple_pages.
+                </li>
+                <li class="pb-2">With the help of blueprint, I extended pages for the application.</li>
+                <li class="pb-2">To test if the simple pages are working, go to "Services" tab at the bottom.<br> right
+                    click on the docker container [make sure the container is running], then select "create terminal"
+                    from the menu. In the terminal, type "pytest".
+                </li>
+            </ul>
 
 
         </div>
 
         <div class="col">
-            <h4 class="blue mb-3">Docker Commands:</h4>
+            <h4 class="red mb-3">Link:</h4>
+            <p><strong>Link to GitHub project repository</strong></p>
+            <span>https://github.com/Liz457/project</span>
         </div>
     </div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>

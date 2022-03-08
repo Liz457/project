@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-     <!doctype html>
+    <!doctype html>
     <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -15,7 +15,7 @@
     <span class="disappear">Deployment</span>
     <div class="row">
         <div class="col-8 border border-light border-2">
-            <h1 class="blue mb-3">CI/CD</h1>
+            <h1 class="red mb-3">CI/CD</h1>
             <h5>Continuous integration and deployments:</h5>
             <p>
                 Testing while merging and deploying somewhere you can see. Continuous Integration (CI) is a DevOps
@@ -30,43 +30,30 @@
                 change that passes through the stages of production is released to the end-users. There is absolutely no
                 way other than any failure in the test that may stop the deployment of new changes to the output.
             </p>
+        <h5>To deploy master to a production server -</h5>
+            <ul class="list-group">
+                <li class="list-group-item">After reviewing the code and once all the tests have passed, you can click
+                    on "merge pull request". That will merge the pull request/ code to the master branch. This will also
+                    run some tests, build the container and then will deploy the code to the production server.
+                </li>
 
-            <h5>Simple pages:</h5>
-            <p>
-            <ul>
-                <li class="pb-2">I used <i>blueprints</i> concept of Flask to create simple pages. It supports common
-                    patterns within an application.
-                </li>
-                <li class="pb-2">Under simple_pages folder, _init_.py --> which has the blueprint for simple pages. When
-                    you bind a function with the help of the @simple_pages.route decorator, the blueprint will record
-                    the intention
-                    of registering the function show on the application when it’s later registered. Additionally, it
-                    will prefix the endpoint of the function with the name of the blueprint which was given to the
-                    Blueprint
-                    constructor (in this case also simple_pages). The blueprint’s name does not modify the URL, only the
-                    endpoint.
-                </li>
-                <li class="pb-2">Under app folder, _init_.py --> which is the code to register the blueprint. This will
-                    create the flask app and register the blueprint for simple_pages.
-                </li>
-                <li class="pb-2">With the help of blueprint, I extended pages for the application.</li>
-                <li class="pb-2">To test if the simple pages are working, go to "Services" tab at the bottom.<br> right
-                    click on the docker container [make sure the container is running], then select "create terminal"
-                    from the menu. In the terminal, type "pytest".
-                </li>
             </ul>
-            </p>
+
 
         </div>
 
         <div class="col">
-            <h4 class="blue mb-3">Need to set up for GitHub Actions:</h4>
-            <p>Add action secrets repository in: -> settings -> actions -> secrets</p>
-            <ol class="list-group list-group-numbered">
-                <li class="list-group-item">DOCKER_USERNAME</li>
-                <li class="list-group-item">DOCKER_PASSWORD</li>
-                <li class="list-group-item">HEROKU_API_KEY</li>
-            </ol>
+            <h4 class="red mb-3">Reviewing and Deploying</h4>
+            <p>To review code using a development server before merging pull requests -</p>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Once the pull request is done, before confirming the pull request, you can
+                    click on "Files Changed" and see what is the pull request is about and hat are the updates. When the
+                    pull request is done, you will see the test being done on the pull request. If the test will pass
+                    then the code will be in the development workflow. You can open the Heroku dev app in the browser
+                    and see everything is working fine.
+                </li>
+            </ul>
+
         </div>
     </div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
