@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<!doctype html>
+    <!doctype html>
     <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -77,19 +77,41 @@
                 <li class="list-group-item"><strong>Check the status of the current branch:</strong> git status</li>
                 <li class="list-group-item"><strong>Commit changes to the branch: </strong>git commit -m "new changes"
                 </li>
-                <li class="list-group-item"><strong>Initialize an existing directory as a Git repository:</strong>git init</li>
-                <li class="list-group-item"><strong>Retrieve an entire repository from a hosted location via URL:</strong> git clone [url]</li>
-                <li class="list-group-item"><strong>Merge the specified branch’s history into the current one:</strong> git merge [branch]
-</li>
-                <li class="list-group-item"><strong>Show all commits in the current branch’s history:</strong> git log</li>
-                <li class="list-group-item"><strong>Transmit local branch commits to the remote repository branch:</strong> git push [alias] [branch]</li>
-                <li class="list-group-item"><strong>Apply any commits of current branch ahead of specified one:</strong> git rebase [branch]</li>
-                <li class="list-group-item"><strong>Fetch and merge any commits from the tracking remote branch:</strong> git pull</li>
+                <li class="list-group-item"><strong>Initialize an existing directory as a Git repository:</strong>git
+                    init
+                </li>
+                <li class="list-group-item"><strong>Retrieve an entire repository from a hosted location via
+                    URL:</strong> git clone [url]
+                </li>
+                <li class="list-group-item"><strong>Merge the specified branch’s history into the current one:</strong>
+                    git merge [branch]
+                </li>
+                <li class="list-group-item"><strong>Show all commits in the current branch’s history:</strong> git log
+                </li>
+                <li class="list-group-item"><strong>Transmit local branch commits to the remote repository
+                    branch:</strong> git push [alias] [branch]
+                </li>
+                <li class="list-group-item"><strong>Apply any commits of current branch ahead of specified one:</strong>
+                    git rebase [branch]
+                </li>
+                <li class="list-group-item"><strong>Fetch and merge any commits from the tracking remote
+                    branch:</strong> git pull
+                </li>
             </ol>
 
         </div>
         <div class="col">
-
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="{{ url_for('static', filename='images/git-3.png') }}" class="img-fluid" alt="...">
+                </li>
+                <li class="list-group-item">
+                    <img src="{{ url_for('static', filename='images/git-1.png') }}" class="img-fluid" alt="...">
+                </li>
+                <li class="list-group-item">
+                    <img src="{{ url_for('static', filename='images/git-2.png') }}" class="d-block w-100" alt="...">
+                </li>
+            </ul>
         </div>
     </div>
 
