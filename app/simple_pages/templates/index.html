@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-   <!doctype html>
+    <!doctype html>
     <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -17,22 +17,23 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="{{ url_for('simple_pages.show', page="git")}}">
+                    <a href="{{ url_for('simple_pages.show', page="git") }}">
                         <img src="{{ url_for('static', filename='images/git.png') }}" class="d-block w-100" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="{{ url_for('simple_pages.show', page="docker")}}">
-                        <img src="{{ url_for('static', filename='images/docker.png') }}" class="d-block w-100" alt="...">
+                    <a href="{{ url_for('simple_pages.show', page="docker") }}">
+                        <img src="{{ url_for('static', filename='images/docker.png') }}" class="d-block w-100"
+                             alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="{{ url_for('simple_pages.show', page="flask")}}">
+                    <a href="{{ url_for('simple_pages.show', page="flask") }}">
                         <img src="{{ url_for('static', filename='images/flask.png') }}" class="d-block w-100" alt="...">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="{{ url_for('simple_pages.show', page="deployment")}}">
+                    <a href="{{ url_for('simple_pages.show', page="deployment") }}">
                         <img src="{{ url_for('static', filename='images/cicd.png') }}" class="d-block w-100" alt="...">
                     </a>
                 </div>
@@ -53,25 +54,33 @@
     <div class="row">
         <div class="col">
             <div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Elizabeth Mac</h5>
-        <p class="card-text">IS 601852  </p>
-        <a href="#" class="btn btn-primary">Let's Connect</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Welcome to My Site</h5>
-        <p class="card-text">You will find different technologies that have been used to create this website.</p>
-        <a href="#" class="btn btn-primary">Explore</a>
-      </div>
-    </div>
-  </div>
-</div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Introduction</h5>
+                            <p class="card-text">Hello, My name is Elizabeth Mac. I am a graduate student in Information
+                                Systems. I have done my bachelor's degree in Information Technology. I taught myself
+                                coding from Udemy and YouTube channels. I started working as an Associate Developer few
+                                months ago. I work with both the frontend and backend. Since I recently
+                                started working in the field, I am still new and learning a lot of things. </p>
+                            <a href="#" class="btn btn-primary">Let's Connect</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Welcome to My Site</h5>
+                            <p class="card-text">This website is a combination of code and explanations on how the
+                                technology works. You will find different technologies that have been used to create
+                                this website. All the explanations available on this website is about the technologies
+                                that have been used to create this website as well. Hoping that you will learn something
+                                from this website. </p>
+                            <a href="#" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
