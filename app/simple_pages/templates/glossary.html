@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block content %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+            <title>{% block title %}{% endblock %}This is {{ name }} website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <div class="row">
+        <div class="col-8 border border-light border-2">
+            <h1 class="red mb-3">Glossary of OOP</h1>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item"><strong>Instantiation:</strong> It is the process of creating an Instance of
+                    an object. Creating a new instance of a class is known as instantiation.
+                </li>
+                <li class="list-group-item"><strong>Object:</strong> The object is an entity that has a state and
+                    behavior associated with it. More specifically, any single integer or any single string is an
+                    object. It is an instance of the class.
+                </li>
+                <li class="list-group-item"><strong>Class:</strong> A class is a collection of objects. A class contains
+                    the blueprints or the prototype from which the objects are being created. It is a logical entity
+                    that contains some attributes and methods.
+                </li>
+                <li class="list-group-item"><strong>Namespace:</strong> A namespace is a collection of names and the
+                    details of the objects referenced by the names. It is the mapping of names to their values.
+                </li>
+                <li class="list-group-item"><strong>Constructor:</strong> It is a special type of method used to
+                    initialize the object of a Class. The constructor will be executed automatically when the object is
+                    created. The main purpose of the constructor is to declare and initialize instance variables.
+                </li>
+                <li class="list-group-item"><strong>Fixture:</strong> Fixtures are functions, which will run before each
+                    test function to which it is applied. Fixtures are used to feed some data to the tests such as
+                    database connections, URLs to test and some sort of input data.
+                </li>
+                <li class="list-group-item"><strong>Type hint:</strong> It is a formal solution to statically indicate
+                    the type of a value within your code.
+                </li>
+                <li class="list-group-item"><strong>Type Cast:</strong> It is to specify the type of a variable. Type
+                    casting method to convert the variable data type into a certain data type in order to the operation
+                    required to be performed by the user.
+                </li>
+                <li class="list-group-item"><strong>Unit test:</strong> Unit Testing is the first level of software
+                    testing where the smallest testable parts of a software are tested. This is used to validate that
+                    each unit of the software performs as designed.
+                </li>
+                <li class="list-group-item"><strong>Static:</strong> It is to declare variables and functions in global
+                    scope, namespace scope, and class scope.
+                </li>
+                <li class="list-group-item"><strong>Instance method:</strong> This is the default method defined in
+                    Python classes. It can access instances of a class (objects). Instance method is used to read or
+                    modify the state of an object.
+                </li>
+                <li class="list-group-item"><strong>Static method:</strong> It is a general utility method that
+                    performs a task in isolation. It is bound to the class and not the object of the class.
+                </li>
+                <li class="list-group-item"><strong>Encapsulation:</strong> It is the idea of bundling data and
+                    methods that work on that data within one unit. This puts restrictions on accessing variables and
+                    methods directly and can prevent the accidental modification of data.
+                </li>
+                <li class="list-group-item"><strong>Inheritance:</strong> Inheritance allows us to define a class that
+                    inherits all the methods and properties from another class.
+                </li>
+                <li class="list-group-item"><strong>Polymorphism:</strong> It lets us define methods in the child class
+                    that have the same name as the methods in the parent class.
+                </li>
+                <li class="list-group-item"><strong>Abstraction:</strong> It is defined as a process of handling
+                    complexity by hiding unnecessary information from the user. Abstraction provides a programmer to
+                    hide all the irrelevant data/process of an application in order to reduce complexity and increase
+                    the efficiency of the program.
+                </li>
+            </ol>
+
+            <h4 class="red mb-3 mt-6">Overview of SOLID:</h4>
+            <p>
+                S.O.L.I.D. Principles is a Software Development Principle for programming with OOP Paradigm. These
+                Principles were introduced by Robert C. Martin (Uncle Bob) in his paper Design Principles and Design
+                Patterns (2000). <br>
+                <strong>S.O.L.I.D</strong> <br>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>S: single-responsibility principle</strong> -> A Class should only
+                    have 1 purpose
+                </li>
+                <li class="list-group-item"><strong>O: open/closed principle</strong> -> A Class should be Open for
+                    Extension but Closed for Modification.
+                </li>
+                <li class="list-group-item"><strong>L: Liskov Substitution Principle</strong> -> Abstraction should be
+                    able to provide all Child Class needs.
+                </li>
+                <li class="list-group-item"><strong>I: Interface Segregation Principle</strong> -> Small Interface is
+                    better than Big Interface.
+                </li>
+                <li class="list-group-item"><strong>D: Dependency Inversion Principle</strong> -> A Class should depend
+                    on Abstraction, not Implementation.
+                </li>
+            </ul>
+
+            S.O.L.I.D makes the code more understandable, flexible, and maintainable
+            </p>
+
+            <h4 class="red mb-3 mt-6">Overview of Design patterns:</h4>
+            <p>A design pattern is a general repeatable solution to a commonly occurring problem in software design. A
+                design pattern isn’t a finished design that can be transformed directly into code. It is a description
+                or template for how to solve a problem that can be used in many different situations. A design pattern
+                provides a general reusable solution for the common problems that occur in software design. The pattern
+                typically shows relationships and interactions between classes or objects. The idea is to speed up the
+                development process by providing well-tested, proven development/design paradigms. <br>
+                As per the design pattern reference book Design Patterns – Elements of Reusable Object-Oriented Software,
+                there are 23 design patterns which can be classified in three categories: Creational, Structural and
+                Behavioral patterns. We’ll also discuss another category of design pattern: J2EE design patterns.
+            </p>
+        </div>
+
+        <div class="col">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img src="{{ url_for('static', filename='images/oop1.png') }}" class="img-fluid rounded" alt="...">
+                </li>
+                <li class="list-group-item">
+                    <img src="{{ url_for('static', filename='images/oop2.png') }}" class="img-fluid rounded" alt="...">
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+
+    </html>
+{% endblock %}
