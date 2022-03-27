@@ -1,3 +1,4 @@
+# """This tests the context processors that help the theme print common function"""
 # import datetime
 # from os import getenv
 #
