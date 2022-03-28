@@ -49,6 +49,12 @@ def test_calculator_multiply_method():
     assert calculator.multiply(1,1) == 1
 
 
+def test_calculator_divide_method():
+    """Testing the Calculator divide"""
+    calculator = Calculator()
+    assert calculator.divide(1,1) == 1
+
+
 def test_my_first_test_add():
     """Testing the addition"""
     assert 1 + 1 == 2

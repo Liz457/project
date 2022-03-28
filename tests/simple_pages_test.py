@@ -10,6 +10,8 @@ def test_request_main_menu_links(client):
     assert b'<a class="nav-link" href="/deployment">Deployment</a>' in response.data
     assert b'<a class="nav-link" href="/glossary">Glossary</a>' in response.data
     assert b'<a class="nav-link" href="/aaa">AAA</a>' in response.data
+    assert b'<a class="nav-link" href="/oops">OOPs</a>' in response.data
+    assert b'<a class="nav-link" href="/solid">SOLID</a>' in response.data
 
 
 def test_request_index(client):
@@ -53,6 +55,18 @@ def test_request_aaa(client):
     response = client.get("/aaa")
     assert response.status_code == 200
     assert b"AAA" in response.data
+
+def test_request_oops(client):
+    """This makes the index page"""
+    response = client.get("/oops")
+    assert response.status_code == 200
+    assert b"OOPs" in response.data
+
+def test_request_solid(client):
+    """This makes the index page"""
+    response = client.get("/solid")
+    assert response.status_code == 200
+    assert b"SOLID" in response.data
 
 def test_request_page_not_found(client):
     """This makes the index page"""
