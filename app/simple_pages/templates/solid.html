@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+            <title>{% block title %}{% endblock %}This is {{ name }} website</title>
+        {% endblock %}
+
+    </head>
+    <body>
+    <div class="row">
+        <div class="col-8 border border-light border-2">
+            <h1 class="red mb-3">S.O.L.I.D.</h1>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item"><strong>S:</strong> Single-Responsibility Principle
+                    <br>
+                    In the <i>Calculator</i> class, all the methods are following the SOLID principle. For Example, The
+                    add method adds 2 different values and gives the result. The subtract methods subtracts the one
+                    value from another. So, the single responsibility of the division method is to divide two numbers,
+                    store the result of
+                    the division calculation in the results and return it.
+                </li>
+                <li class="list-group-item"><strong>O:</strong> Open-Closed Principle
+                    <br>
+                    <img src="{{ url_for('static', filename='images/divide.png') }}" class="img-fluid rounded"
+                         alt="...">
+                    This principle explains that the method should do one thing, but it should also be complete whatever
+                    problems it might get. For example have error handlers. That way the function will finish the job
+                    whatever it is designed to do. The <i>Calculator</i> satisfies the SOLID principle in this method as
+                    well.
+                </li>
+                <li class="list-group-item"><strong>L:</strong> Liskov Substitution Principle
+                    <br>
+                    <img src="{{ url_for('static', filename='images/liskov.png') }}" class="img-fluid rounded"
+                         alt="...">
+                    According to this principle, any subtype class should be 100% compatible with its base class. The
+                    <i>Calculator</i> satisfies this principle. The Calculator class is 100% compatible for it's base
+                    classes.
+                </li>
+                <li class="list-group-item"><strong>I:</strong> Interface Segregation Principle
+                    <br>
+                    This principle facilitates inheritance. Class should not be forced to depend on those of its methods
+                    that they don’t use. Class should only see the methods they will use, and subclasses should inherit
+                    only the methods they need. Otherwise, structures must be dismantled, avoid fat classes.In this
+                    Calculator program, the classes are only using what they need.
+                </li>
+                <li class="list-group-item"><strong>D:</strong> Dependency inversion Principle
+                    <br>
+                    This principle explains that High level modules should not depend upon low level modules. Both
+                    should depend upon abstractions. Abstractions should not depend upon details, details should depend
+                    upon abstractions.In the Calculator program, there is no dependency between instance and its method.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="col">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <img src="{{ url_for('static', filename='images/solid.png') }}" class="img-fluid rounded" alt="...">
+            </li>
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>
+{% endblock %}

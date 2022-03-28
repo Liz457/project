@@ -15,19 +15,43 @@
     <div class="row">
         <div class="col-8 border border-light border-2">
             <h1 class="red mb-3">AAA testing</h1>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">
+                    <img src="{{ url_for('static', filename='images/AAA2.png') }}" class="img-fluid rounded" alt="...">
+                    <br>
+                </li>
+                <li class="list-group-item">
+                    AAA testing stands for Arrange-Act-Assert.
+                </li>
+                <li class="list-group item">
+                    AAA patterns suggests that you should divide your test method into three sections: arrange, act and
+                    assert. Each one of them only responsible for the part in which they are named after. So the arrange
+                    section you only have code required to set up that specific test. Then there is the Act, which
+                    should be the invocation of the method being tested. And on Assert you would simply check whether
+                    the expectations were met.
+                </li>
+                <li class="list-group item">
+                    It is useful because AAA pattern helps you keep your unit tests well-structured, clean and
+                    readable. This pattern stays the same, regardless of what you are mocking. It creates a clear
+                    separation between a test’s setup, operations, and results. It also enforces a certain degree of
+                    discipline when you write your tests. The well-defined structure makes the code easier to read and
+                    understand. If you place the steps in order and format your code to separate them, you can scan a
+                    test and quickly comprehend what it does.
+                </li>
+            </ol>
         </div>
     </div>
 
 
     <div class="col">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <img src="{{ url_for('static', filename='images/AAA1.png') }}" class="img-fluid rounded" alt="...">
-                </li>
-            </ul>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <img src="{{ url_for('static', filename='images/AAA1.png') }}" class="img-fluid rounded" alt="...">
+            </li>
+        </ul>
     </div>
 
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
     </body>
-</html>
+    </html>
 {% endblock %}

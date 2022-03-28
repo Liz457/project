@@ -1,5 +1,5 @@
 """ This is the Calculator Class"""
-
+from calculator.operations import Addition, Subtraction, Multiplication, Division
 
 class Calculator:
     """ This is the default result property"""
@@ -15,6 +15,7 @@ class Calculator:
         self.result =value_1 -value_2
         return self.result
 
+
     def get_result(self):
         """ This is the get result method"""
         return self.result
@@ -26,6 +27,16 @@ class Calculator:
 
     def divide(self, value_1, value_2):
         """This is the division method"""
-        self.result = value_1 /value_2
-        return self.result
+        try:
+            self.result = value_1 /value_2
+            return self.result
+        except ZeroDivisionError as ex:
+            raise ValueError('The second argument (value_2) must not be zero')
+        except ValueError as e:
+            print(e)
+
+
+
+
+
 
