@@ -3,6 +3,12 @@ body {
     font-family: Helvetica, "Helvetica Neue", sans-serif;
     line-height: 1.7;
 }
+
+.active{
+    color:blueviolet !important;
+    background-color: #4F81BD;
+}
+
 .logo{
   font-family: 'Roboto', sans-serif;
     font-weight: bold;

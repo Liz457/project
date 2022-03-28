@@ -27,5 +27,10 @@ class Multiplication:
         """This is the add method"""
         return value_1 * value_2
 
-
-
+class Division:
+    """This is the division method"""
+    
+    @staticmethod
+    def divide(value_1, value_2):
+        """This is the division method"""
+        return value_1 / value_2
