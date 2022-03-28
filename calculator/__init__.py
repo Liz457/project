@@ -23,3 +23,9 @@ class Calculator:
         """This is the multiply method"""
         self.result =value_1* value_2
         return  self.result
+
+    def divide(self, value_1, value_2):
+        """This is the division method"""
+        self.result = value_1 /value_2
+        return self.result
+
